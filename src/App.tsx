@@ -859,9 +859,7 @@ function ContactSection() {
           <p className="text-slate-text text-xs md:text-sm">
             © 2026 Akshay S. Madhwani. All rights reserved.
           </p>
-          <p className="font-mono text-[10px] md:text-xs text-slate-text/60">
-            Built with React + GSAP + Tailwind
-          </p>
+          
         </div>
       </div>
     </section>
