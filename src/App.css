@@ -1,0 +1,96 @@
+/* App-specific styles */
+
+/* Smooth scrolling disabled for GSAP control */
+html {
+  scroll-behavior: auto;
+}
+
+/* Ensure sections stack properly */
+.section-pinned {
+  will-change: transform;
+}
+
+/* Glow bar animation */
+.glow-bar {
+  will-change: transform;
+}
+
+/* Card hover effects */
+.card-frame {
+  will-change: transform, opacity;
+  transition: border-color 0.3s ease;
+}
+
+/* Project card hover */
+.project-card {
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Button interactions */
+.btn-primary:active,
+.btn-secondary:active {
+  transform: scale(0.98);
+}
+
+/* Grain overlay performance */
+.grain-overlay {
+  will-change: opacity;
+  pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .section-pinned .absolute.right-\[6vw\],
+  .section-pinned .absolute.right-\[7vw\] {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 90vw;
+    margin: 2rem auto;
+  }
+  
+  .section-pinned .absolute.left-\[7vw\] {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 90vw;
+    margin: 2rem auto;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Selection color */
+::selection {
+  background: rgba(79, 109, 245, 0.3);
+  color: #F4F6FF;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0F17;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E2738;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2A3548;
+}
