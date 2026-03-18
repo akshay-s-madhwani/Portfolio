@@ -1,19 +1,19 @@
-import { useEffect, useRef, useLayoutEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { 
-  ChevronRight, 
-  Download, 
-  Copy, 
-  Check, 
-  Linkedin, 
-  Github, 
-  Mail,
+import {
+  Check,
+  ChevronRight,
   Code2,
-  Zap,
+  Copy,
+  Download,
   Eye,
-  Users
+  Github,
+  Linkedin,
+  Mail,
+  Users,
+  Zap
 } from 'lucide-react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import './App.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -115,7 +115,7 @@ function HeroSection() {
     <section ref={sectionRef} className="section-pinned z-10">
       <div ref={bgRef} className="absolute inset-0">
         <img 
-          src="/hero_city_bg.jpg" 
+          src="/Portfolio/hero_city_bg.jpg" 
           alt="City skyline" 
           className="w-full h-full object-cover"
         />
@@ -334,19 +334,19 @@ function ProjectsSection() {
       name: 'Earnpati',
       desc: 'Fintech affiliate platform',
       tech: 'MERN + React Native • 10k+ users • 4.8★',
-      image: '/project_thumb_earn.jpg'
+      image: '/Portfolio/project_thumb_earn.jpg'
     },
     {
       name: 'OSD Hongkong',
       desc: 'Bulk messaging + WhatsApp commerce',
       tech: '50 parallel bots • K8s orchestration',
-      image: '/project_thumb_osd.jpg'
+      image: '/Portfolio/project_thumb_osd.jpg'
     },
     {
       name: 'iRide',
       desc: 'Logistics tracking app',
       tech: '10k+ riders • distance + cost engine',
-      image: '/project_thumb_iride.jpg'
+      image: '/Portfolio/project_thumb_iride.jpg'
     }
   ];
   
@@ -442,7 +442,7 @@ function TestimonialSection() {
   return (
     <section ref={sectionRef} className="section-pinned z-60">
       <div ref={bgRef} className="absolute inset-0">
-        <img src="/testimonial_hands_bg.jpg" alt="" className="w-full h-full object-cover" />
+        <img src="/Portfolio/testimonial_hands_bg.jpg" alt="" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-[rgba(11,15,23,0.70)]" />
       </div>
       
@@ -582,7 +582,7 @@ function AboutSection() {
             </p>
           </div>
           <div className="w-full md:w-[280px] h-[200px] rounded-xl overflow-hidden">
-            <img src="/about_office.jpg" alt="" className="w-full h-full object-cover" />
+            <img src="/Portfolio/about_office.jpg" alt="" className="w-full h-full object-cover" />
           </div>
         </div>
       </div>
@@ -774,7 +774,7 @@ function App() {
             { label: 'State', desc: 'Redux with durable persistence' },
             { label: 'Shipping', desc: 'Play Store releases + CI/CD' }
           ]}
-          bgImage="/mobile_phone_bg.jpg"
+          bgImage="/Portfolio/mobile_phone_bg.jpg"
           layout="left"
         />
         
@@ -788,7 +788,7 @@ function App() {
             { label: 'Bots', desc: 'WhatsApp / Telegram orchestration' },
             { label: 'Delivery', desc: 'Clean exports + alerting' }
           ]}
-          bgImage="/automation_desk_bg.jpg"
+          bgImage="/Portfolio/automation_desk_bg.jpg"
           layout="right"
         />
         
@@ -802,7 +802,7 @@ function App() {
             { label: 'Caching', desc: 'Redis + optimized queries' },
             { label: 'Observability', desc: 'Logs, alerts, health checks' }
           ]}
-          bgImage="/server_corridor_bg.jpg"
+          bgImage="/Portfolio/server_corridor_bg.jpg"
           layout="left"
         />
         
