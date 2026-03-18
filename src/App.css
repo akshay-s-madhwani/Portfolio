@@ -42,23 +42,49 @@ html {
   pointer-events: none;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .section-pinned .absolute.right-\[6vw\],
-  .section-pinned .absolute.right-\[7vw\] {
-    position: relative;
-    right: auto;
-    top: auto;
-    width: 90vw;
-    margin: 2rem auto;
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .section-pinned {
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
   }
   
-  .section-pinned .absolute.left-\[7vw\] {
+  /* Adjust card frames for mobile */
+  .card-frame {
+    border-radius: 16px;
+  }
+  
+  /* Make glow bar smaller on mobile */
+  .glow-bar {
+    width: 4px !important;
+  }
+  
+  /* Reduce padding on mobile */
+  .card-frame {
+    padding: 1rem;
+  }
+  
+  /* Adjust meta label size */
+  .meta-label {
+    font-size: 10px;
+  }
+  
+  /* Ensure text doesn't overflow */
+  .card-text h2 {
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .section-pinned .absolute {
     position: relative;
-    left: auto;
-    top: auto;
     width: 90vw;
-    margin: 2rem auto;
+    margin: 0 auto;
+    left: auto;
+    right: auto;
+    top: auto;
   }
 }
 
@@ -79,7 +105,7 @@ html {
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -88,9 +114,32 @@ html {
 
 ::-webkit-scrollbar-thumb {
   background: #1E2738;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #2A3548;
+}
+
+/* Touch device optimizations */
+@media (pointer: coarse) {
+  .project-card:hover {
+    transform: none;
+  }
+  
+  .btn-primary:hover,
+  .btn-secondary:hover {
+    transform: none;
+  }
+}
+
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/* Ensure images don't overflow */
+img {
+  max-width: 100%;
+  height: auto;
 }
